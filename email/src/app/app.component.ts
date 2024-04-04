@@ -13,7 +13,7 @@ export class AppComponent {
 
   ngOnInit() {}
  
-  mandaEmail(s,t) {
-    this.email.mandaEmail(s,t);
+  mandaEmail(s,t,m,d) {
+    this.email.mandaEmail(s,t,m,d);
   }
 }

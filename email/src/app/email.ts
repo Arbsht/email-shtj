@@ -8,13 +8,15 @@ import { NgModule } from "@angular/core";
 
 export class Email {
 
+    emails = [];
     constructor() {}
 
   ngOnInit() {}
 
-  mandaEmail(s, t) {
-    var stringa = s.concat("\n", t)
-
+  mandaEmail(s, t, m, d) {
+    var stringa = s.concat("\n", t);
+    var emailDaAggiungere = [m, d, s, t];
+    this.emails.concat(emailDaAggiungere);
     alert(stringa);
   }
 }
