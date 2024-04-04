@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'email';
+  soggetto: string="";
+
+  constructor() {}
+
+  ngOnInit() {}
+
+  mandaEmail(s, t) {
+    var stringa = s.concat("\n", t)
+
+    alert(stringa);
+  }
 }
