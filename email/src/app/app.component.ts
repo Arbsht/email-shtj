@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { Email } from './email';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,15 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'email';
-  soggetto: string="";
+  email = new Email();
 
   constructor() {}
 
   ngOnInit() {}
-
-  mandaEmail(s, t) {
-    var stringa = s.concat("\n", t)
-
-    alert(stringa);
+ 
+  mandaEmail(s,t) {
+    this.email.mandaEmail(s,t);
   }
 }
