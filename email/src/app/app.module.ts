@@ -2,15 +2,17 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { SentmailComponent } from './sentmail/sentmail.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SentmailComponent
   ],
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [AppComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

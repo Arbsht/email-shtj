@@ -8,4 +8,5 @@
   <input type="text" placeholder="Soggetto" #soggetto><br>
   <textarea cols="30" rows="10" placeholder="Testo" #testo></textarea>  <br>
   <button (click)="mandaEmail(soggetto.value, testo.value, mittente.value, destinatario.value)" type="Button" name="button">Manda</button>
+    <app-sentmail [email]="email.emails"></app-sentmail>
 </body>
