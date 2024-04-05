@@ -1,10 +1,11 @@
-<li *ngFor="let mail of email; let $index = index" [style.background-color]="mail.evidenziato ? 'yellow' : 'white'">
-    <h2>Mittente - {{ mail.mittente }}  Destinatario - {{ mail.destinatario }}</h2><button (click)="toggleEmail($index)">
+<div *ngFor="let mail of email; let $index = index" [style.background-color]="mail.evidenziato ? 'yellow' : 'white'" class="list-group-item">
+    <h2>Mittente:{{ mail.mittente }}  <br>Destinatario:{{ mail.destinatario }}</h2>
+    <button (click)="toggleEmail($index)" class="btn btn-primary">
         {{ mail.aperta ? 'Chiudi' : 'Apri' }}
     </button>
-    <button *ngIf="mail.aperta" (click)="evidenzia($index)">Speciale</button>
+    <button *ngIf="mail.aperta" (click)="evidenzia($index)" class="btn btn-secondary">Speciale</button>
     <div *ngIf="mail.aperta">
     <h3>{{ mail.soggetto }}</h3>
     <p>{{ mail.testo }}</p>
 </div>
-</li>
+</div>

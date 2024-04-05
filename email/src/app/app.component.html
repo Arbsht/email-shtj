@@ -1,12 +1,14 @@
-<head>
-  <title>Email App</title>
-</head>
 <body>
+  <div class="container-xl">
   <h1>Email app</h1>
-  <input type="text" placeholder="Mittente" #mittente><br>
-  <input type="text" placeholder="Destinatario" #destinatario><br>
-  <input type="text" placeholder="Soggetto" #soggetto><br>
-  <textarea cols="30" rows="10" placeholder="Testo" #testo></textarea>  <br>
-  <button (click)="mandaEmail(soggetto.value, testo.value, mittente.value, destinatario.value)" type="Button" name="button">Manda</button>
+  <h2>Invia un'email:</h2>
+  <input type="text" placeholder="Mittente" #mittente class="form-control"><br><br>
+  <input type="text" placeholder="Destinatario" #destinatario class="form-control"><br><br>
+  <input type="text" placeholder="Soggetto" #soggetto class="form-control"><br><br>
+  <textarea cols="30" rows="10" placeholder="Testo" #testo class="form-control"></textarea><br><br>
+  <button (click)="mandaEmail(soggetto.value, testo.value, mittente.value, destinatario.value)" type="Button" name="button" class="btn btn-primary">Manda</button>
+  <div class="list-group">
     <app-sentmail [email]="email.emails"></app-sentmail>
+  </div>
+  </div>
 </body>
