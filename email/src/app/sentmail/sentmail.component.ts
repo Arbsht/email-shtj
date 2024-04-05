@@ -7,5 +7,11 @@ import { Component, Input } from '@angular/core';
 export class SentmailComponent {
   @Input() email: any[] = [];
 
+  toggleEmail(index: number) {
+    this.email[index].aperta = !this.email[index].aperta;
+  }
 
+  evidenzia(index: number) {
+    this.email[index].evidenziato = !this.email[index].evidenziato;
+  }
 }
